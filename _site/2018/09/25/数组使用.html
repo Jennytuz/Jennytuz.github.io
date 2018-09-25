@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>数组使用 | Your awesome title</title>
+<meta name="generator" content="Jekyll v3.8.3" />
+<meta property="og:title" content="数组使用" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="四个（关于数组使用的）错误经常出现！" />
+<meta property="og:description" content="四个（关于数组使用的）错误经常出现！" />
+<link rel="canonical" href="http://localhost:4000/2018/09/25/%E6%95%B0%E7%BB%84%E4%BD%BF%E7%94%A8.html" />
+<meta property="og:url" content="http://localhost:4000/2018/09/25/%E6%95%B0%E7%BB%84%E4%BD%BF%E7%94%A8.html" />
+<meta property="og:site_name" content="Your awesome title" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-09-25T00:00:00+08:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/2018/09/25/%E6%95%B0%E7%BB%84%E4%BD%BF%E7%94%A8.html","description":"四个（关于数组使用的）错误经常出现！","headline":"数组使用","dateModified":"2018-09-25T00:00:00+08:00","datePublished":"2018-09-25T00:00:00+08:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/09/25/%E6%95%B0%E7%BB%84%E4%BD%BF%E7%94%A8.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Your awesome title</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">数组使用</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-09-25T00:00:00+08:00" itemprop="datePublished">Sep 25, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>四个（关于数组使用的）错误经常出现！</p>
+
+<h3 id="使用arrayincludes替代-arrayindexof">使用<code class="highlighter-rouge">Array.includes</code>替代 <code class="highlighter-rouge">Array.indexOf</code></h3>
+
+<p>“如果需要在数组中查找某个元素，请使用 Array.indexOf。”</p>
+
+<p>我记得在我学习 <code class="highlighter-rouge">JavaScript</code> 的课程中有类似的这么一句话。毫无疑问，这完全正确！</p>
+
+<p>在 MDN 文档中，对 <code class="highlighter-rouge">Array.indexOf</code>的描述是：返回在数组中可以找到一个给定元素的第一个索引，如果不存在，则返回-1。因此，如果在之后的代码中需要用到（给给定元素的）索引，那么 Array.indexOf是不二之选。</p>
+
+<p>然而，如果我们仅需要知道数组中是否包含给定元素呢？这意味着只是是与否的区别，这是一个布尔问题（boolean question）。针对这种情况，我建议使用直接返回布尔值的 <code class="highlighter-rouge">Array.includes</code>。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'use strict';
+
+const characters = [
+ 'ironman',
+ 'black_widow',
+ 'hulk',
+ 'captain_america',
+ 'hulk',
+ 'thor',
+];
+
+console.log(characters.indexOf('hulk'));
+// 2
+console.log(characters.indexOf('batman'));
+// -1
+
+console.log(characters.includes('hulk'));
+// true
+console.log(characters.includes('batman'));
+// false
+</code></pre></div></div>
+<h3 id="使用--arrayfind-替代--arrayfilter">使用  <code class="highlighter-rouge">Array.find</code> 替代  <code class="highlighter-rouge">Array.filter</code></h3>
+
+<p>Array.filter是一个十分有用的方法。它通过回调函数过滤原数组，并将过滤后的项作为新数组返回。正如它的名字所示，我们将这个方法用于过滤，（一般而言）会获得一个长度更短的新数组。</p>
+
+<p>然而，如果知道经回调函数过滤后，只会剩余唯一的一项，那么我不建议使用 Array.filter。比如：使用等于某个唯一 ID 为过滤条件去过滤一个数组。在这个例子中，Array.filter返回一个仅有一项的新数组。然而，我们仅仅是为了获取 ID 为特定 ID 的那一项，这个新数组显得毫无用处。</p>
+
+<p>让我们讨论一下性能。为了获取所有符合回调函数过滤条件的项，Array.filter必须遍历整个数组。如果原数组中有成千上万项，回调函数需要执行的次数是相当多的。</p>
+
+<p>为避免这些情况，我建议使用 Array.find。它与 Array.filter一样需要一个回调函数，（但只是返回）符合条件的第一项。当找到符合回调函数过滤条件的第一个元素时，它会立即停止往下的搜寻。不再遍历整个数组。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'use strict';
+
+const characters = [
+ { id: 1, name: 'ironman' },
+ { id: 2, name: 'black_widow' },
+ { id: 3, name: 'captain_america' },
+ { id: 4, name: 'captain_america' },
+];
+
+function getCharacter(name) {
+ return character =&gt; character.name === name;
+}
+
+console.log(characters.filter(getCharacter('captain_america')));
+// [
+//   { id: 3, name: 'captain_america' },
+//   { id: 4, name: 'captain_america' },
+// ]
+
+console.log(characters.find(getCharacter('captain_america')));
+// { id: 3, name: 'captain_america' }
+</code></pre></div></div>
+
+<h3 id="使用-arraysome替代-arrayfind">使用 Array.some替代 Array.find</h3>
+
+<p>我承认我经常犯这个错误。之后，一位朋友建议我去查看 MDN 文档以寻找更好的方法。事实上（这错误）与上面 <code class="highlighter-rouge">Array.indexOf</code>/<code class="highlighter-rouge">Array.includes</code>的例子十分相像。
+在上面的例子中，我们知道<code class="highlighter-rouge">Array.find</code>需要一个回调函数作为参数，并返回（符合条件的）第一个元素。然而，当我们需要知道数组中是否存在一个元素时，Array.find是最好的选择吗？不一定是，因为它返回一个元素，而不是一个布尔值。
+在下面的例子中，我建议使用 <code class="highlighter-rouge">Array.some</code>，它返回你需要的布尔值。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'use strict';
+
+const characters = [
+ { id: 1, name: 'ironman', env: 'marvel' },
+ { id: 2, name: 'black_widow', env: 'marvel' },
+ { id: 3, name: 'wonder_woman', env: 'dc_comics' },
+];
+
+function hasCharacterFrom(env) {
+ return character =&gt; character.env === env;
+}
+
+console.log(characters.find(hasCharacterFrom('marvel')));
+// { id: 1, name: 'ironman', env: 'marvel' }
+
+console.log(characters.some(hasCharacterFrom('marvel')));
+// true
+</code></pre></div></div>
+
+<p>补充一下<code class="highlighter-rouge">Array.some</code>与<code class="highlighter-rouge">Array.includes</code>使用上的区别。两者都返回一个布尔值，表示某项是否存在于数组之中，一旦找到对应的项，立即停止遍历数组。不同的是<code class="highlighter-rouge">Array.some</code>的参数是回调函数，而 <code class="highlighter-rouge">Array.includes</code>的参数是一个值（均不考虑第二个可选参数）。
+假设希望知道值为 value的项是否存在于数组中，既可以编写代码：<code class="highlighter-rouge">[].includes(value)</code>， 也可以给<code class="highlighter-rouge">Array.some</code>传入 <code class="highlighter-rouge">item =&amp;gt; item === value</code>作为回调函数。<code class="highlighter-rouge">Array.includes</code>使用更简单，<code class="highlighter-rouge">Array.some</code>可操控性更强。</p>
+
+<p>使用<code class="highlighter-rouge">Array.reduce</code>替代<code class="highlighter-rouge">Array.filter</code>与<code class="highlighter-rouge">Array.map</code>的组合</p>
+
+<p>事实上说，<code class="highlighter-rouge">Array.reduce</code>不太容易理解。然而，如果我们先使用 <code class="highlighter-rouge">Array.filter</code>过滤原数组，之后（对结果）再调用 <code class="highlighter-rouge">Array.map</code>（以获取一个新数组）。这看起似乎有点问题，是我们忽略了什么吗？</p>
+
+<p>这样做的问题是：我们遍历了两次数组。第一次是过滤原数组以获取一个长度稍短的新数组，第二次遍历（译者注：指 <code class="highlighter-rouge">Array.map</code>）是对 <code class="highlighter-rouge">Array.filter</code>的返回的新数组进行加工，再次创造了一个新数组！为得到最终的结果，我们结合使用了两个数组方法。每个方法都有它自己的回调函数，而且供 <code class="highlighter-rouge">Array.map</code>使用的临时数组是由 <code class="highlighter-rouge">Array.filter</code>提供的，（一般而言）该数组无法复用。</p>
+
+<p>为避免如此低效场景的出现，我的建议是使用 <code class="highlighter-rouge">Array.reduce</code>。一样的结果，更好的代码！<code class="highlighter-rouge">Array.reduce</code>允许你将过滤后切加工过的项放进累加器中。累加器可以是需要待递增的数字、待填充的对象、 待拼接的字符串或数组等。</p>
+
+<p>在上面的例子中，我们使用了<code class="highlighter-rouge">Array.map</code>，（但更）建议使用累加器为待拼接数组的 <code class="highlighter-rouge">Array.reduce</code>。在下面的例子中，根据变量 env的值，我们会将它加进累加器中或保持累加器不变（即不作任何处理）。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'use strict';
+
+const characters = [
+ { name: 'ironman', env: 'marvel' },
+ { name: 'black_widow', env: 'marvel' },
+ { name: 'wonder_woman', env: 'dc_comics' },
+];
+
+console.log(
+ characters
+   .filter(character =&gt; character.env === 'marvel')
+   .map(character =&gt; Object.assign({}, character, { alsoSeenIn: ['Avengers'] }))
+);
+// [
+//   { name: 'ironman', env: 'marvel', alsoSeenIn: ['Avengers'] },
+//   { name: 'black_widow', env: 'marvel', alsoSeenIn: ['Avengers'] }
+// ]
+
+console.log(
+ characters
+   .reduce((acc, character) =&gt; {
+     return character.env === 'marvel'
+       ? acc.concat(Object.assign({}, character, { alsoSeenIn: ['Avengers'] }))
+       : acc;
+   }, [])
+)
+// [
+//   { name: 'ironman', env: 'marvel', alsoSeenIn: ['Avengers'] },
+//   { name: 'black_widow', env: 'marvel', alsoSeenIn: ['Avengers'] }
+// ]
+</code></pre></div></div>
+
+  </div><a class="u-url" href="/2018/09/25/%E6%95%B0%E7%BB%84%E4%BD%BF%E7%94%A8.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Your awesome title</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Your awesome title</li><li><a class="u-email" href="mailto:jenny940129@gmail.com">jenny940129@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jennytuz"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jennytuz</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
