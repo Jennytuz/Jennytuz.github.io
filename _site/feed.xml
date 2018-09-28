@@ -1,4 +1,230 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-29T00:00:27+08:00</updated><id>http://localhost:4000/</id><title type="html">All about web</title><subtitle>your web description</subtitle><author><name>true</name></author><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/2018/05/17/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-05-17T14:05:21+08:00</published><updated>2018-05-17T14:05:21+08:00</updated><id>http://localhost:4000/2018/05/17/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/2018/05/17/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-29T00:04:00+08:00</updated><id>http://localhost:4000/</id><title type="html">All about web</title><subtitle>your web description</subtitle><author><name>true</name></author><entry><title type="html">动效</title><link href="http://localhost:4000/2018/08/12/%E5%8A%A8%E6%95%88.html" rel="alternate" type="text/html" title="动效" /><published>2018-08-12T00:00:00+08:00</published><updated>2018-08-12T00:00:00+08:00</updated><id>http://localhost:4000/2018/08/12/%E5%8A%A8%E6%95%88</id><content type="html" xml:base="http://localhost:4000/2018/08/12/%E5%8A%A8%E6%95%88.html">&lt;h2 id=&quot;1-css3-transition&quot;&gt;1. CSS3 Transition&lt;/h2&gt;</content><author><name>true</name></author><summary type="html">1. CSS3 Transition</summary></entry><entry><title type="html">页面开发流程</title><link href="http://localhost:4000/2018/06/12/%E9%A1%B5%E9%9D%A2%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html" rel="alternate" type="text/html" title="页面开发流程" /><published>2018-06-12T14:05:21+08:00</published><updated>2018-06-12T14:05:21+08:00</updated><id>http://localhost:4000/2018/06/12/%E9%A1%B5%E9%9D%A2%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/2018/06/12/%E9%A1%B5%E9%9D%A2%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html">&lt;h3 id=&quot;1-设计稿审查&quot;&gt;1. 设计稿审查&lt;/h3&gt;
+&lt;h4 id=&quot;了解设计稿的开发友好性&quot;&gt;了解设计稿的开发友好性&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;是否有还原成本高或无法还原的地方&lt;/li&gt;
+  &lt;li&gt;确定一些特殊的元素是否有合理的边界处理&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;了解设计稿的排版布局及内容构成&quot;&gt;了解设计稿的排版布局及内容构成&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;确定页面的框架结构&lt;/li&gt;
+  &lt;li&gt;跨页面可复用组件&lt;/li&gt;
+  &lt;li&gt;当前页面可复用组件&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;2-编写页面&quot;&gt;2. 编写页面&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;选择布局方式&lt;/li&gt;
+  &lt;li&gt;标签语义化&lt;/li&gt;
+  &lt;li&gt;CSS命名&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;3-兼容性测试&quot;&gt;3. 兼容性测试&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;页面在各个浏览器中，以及不同分辨率下是否能正常显示（HTML / CSS 兼容性）&lt;/li&gt;
+  &lt;li&gt;网页的功能是否能在各个浏览器中正常使用（JavaScript 兼容性）&lt;/li&gt;
+  &lt;li&gt;兼容性的基本原则是：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;渐进增强与平稳退化。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;在低端浏览器能够保持可用性和可访问性，然后再渐进增强，逐步增加功能及优化用户体验。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;遇到兼容性问题，可以按如下步骤处理：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;确认触发的场景：什么浏览器，什么版本，什么情况下触发的问题，做到稳定复现。&lt;/li&gt;
+  &lt;li&gt;找出问题原因：是什么问题导致的，具体表现如何？&lt;/li&gt;
+  &lt;li&gt;确定解决办法：参考现成的解决方案，如哪些属性不能使用以及相应的 Hack 处理&lt;/li&gt;
+  &lt;li&gt;收集兼容性处理方法，积累成文档…&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;4-响应式页面&quot;&gt;4. 响应式页面&lt;/h3&gt;
+
+&lt;h4 id=&quot;添加-viewport-meta-标签&quot;&gt;添加 viewport meta 标签&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;使用-media-queries&quot;&gt;使用 Media Queries&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;mobile	移动设备断点，视窗宽度 ≤ 768 px&lt;/li&gt;
+  &lt;li&gt;tablet	平板电脑设备断点，视窗宽度 ≥ 769 px&lt;/li&gt;
+  &lt;li&gt;desktop	桌面电脑断点，视窗宽度 ≥ 1024 px&lt;/li&gt;
+  &lt;li&gt;widescreen	宽屏电脑断点，视窗宽度 ≥ 1216 px&lt;/li&gt;
+  &lt;li&gt;fullhd	高清宽屏电脑断点，视窗宽度 ≥ 1408 px…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;使用-viewport-单位及-rem&quot;&gt;使用 Viewport 单位及 rem&lt;/h3&gt;
+&lt;p&gt;vw 搭配 rem&lt;/p&gt;
+
+&lt;p&gt;给根元素的字体大小设置随着视窗变化而变化的&lt;code class=&quot;highlighter-rouge&quot;&gt;vw&lt;/code&gt;单位，这样就可以实现动态改变其大小&lt;/p&gt;
+
+&lt;p&gt;其他元素的文本字号大小、布局高宽、间距、留白都使用&lt;code class=&quot;highlighter-rouge&quot;&gt;rem&lt;/code&gt;单位
+限制根元素字体大小的最大最小值，配合&lt;code class=&quot;highlighter-rouge&quot;&gt;body&lt;/code&gt;加上最大宽度和最小宽度，实现布局宽度的最大最小限制&lt;/p&gt;
+
+&lt;p&gt;核心代码实现如下：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// rem 单位换算：定为 75px 只是方便运算，750px-75px、640-64px、1080px-108px，如此类推
+$vw_fontsize: 75; // iPhone 6尺寸的根元素大小基准值
+@function rem($px) {
+     @return ($px / $vw_fontsize ) * 1rem;
+}
+// 根元素大小使用 vw 单位
+$vw_design: 750;
+html {
+    font-size: ($vw_fontsize / ($vw_design / 2)) * 100vw; 
+    // 同时，通过Media Queries 限制根元素最大最小值
+    @media screen and (max-width: 320px) {
+        font-size: 64px;
+    }
+    @media screen and (min-width: 540px) {
+        font-size: 108px;
+    }
+}
+// body 也增加最大最小宽度限制，避免默认100%宽度的 block 元素跟随 body 而过大过小
+body {
+    max-width: 540px;
+    min-width: 320px;
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>true</name></author><category term="数组" /><summary type="html">1. 设计稿审查 了解设计稿的开发友好性 是否有还原成本高或无法还原的地方 确定一些特殊的元素是否有合理的边界处理</summary></entry><entry><title type="html">数组使用</title><link href="http://localhost:4000/2018/05/17/%E6%95%B0%E7%BB%84%E4%BD%BF%E7%94%A8.html" rel="alternate" type="text/html" title="数组使用" /><published>2018-05-17T14:05:21+08:00</published><updated>2018-05-17T14:05:21+08:00</updated><id>http://localhost:4000/2018/05/17/%E6%95%B0%E7%BB%84%E4%BD%BF%E7%94%A8</id><content type="html" xml:base="http://localhost:4000/2018/05/17/%E6%95%B0%E7%BB%84%E4%BD%BF%E7%94%A8.html">&lt;p&gt;四个（关于数组使用的）错误经常出现！&lt;/p&gt;
+
+&lt;h3 id=&quot;使用arrayincludes替代-arrayindexof&quot;&gt;使用&lt;code class=&quot;highlighter-rouge&quot;&gt;Array.includes&lt;/code&gt;替代 &lt;code class=&quot;highlighter-rouge&quot;&gt;Array.indexOf&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;“如果需要在数组中查找某个元素，请使用 Array.indexOf。”&lt;/p&gt;
+
+&lt;p&gt;我记得在我学习 &lt;code class=&quot;highlighter-rouge&quot;&gt;JavaScript&lt;/code&gt; 的课程中有类似的这么一句话。毫无疑问，这完全正确！&lt;/p&gt;
+
+&lt;p&gt;在 MDN 文档中，对 &lt;code class=&quot;highlighter-rouge&quot;&gt;Array.indexOf&lt;/code&gt;的描述是：返回在数组中可以找到一个给定元素的第一个索引，如果不存在，则返回-1。因此，如果在之后的代码中需要用到（给给定元素的）索引，那么 Array.indexOf是不二之选。&lt;/p&gt;
+
+&lt;p&gt;然而，如果我们仅需要知道数组中是否包含给定元素呢？这意味着只是是与否的区别，这是一个布尔问题（boolean question）。针对这种情况，我建议使用直接返回布尔值的 &lt;code class=&quot;highlighter-rouge&quot;&gt;Array.includes&lt;/code&gt;。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;'use strict';
+
+const characters = [
+ 'ironman',
+ 'black_widow',
+ 'hulk',
+ 'captain_america',
+ 'hulk',
+ 'thor',
+];
+
+console.log(characters.indexOf('hulk'));
+// 2
+console.log(characters.indexOf('batman'));
+// -1
+
+console.log(characters.includes('hulk'));
+// true
+console.log(characters.includes('batman'));
+// false
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;使用--arrayfind-替代--arrayfilter&quot;&gt;使用  &lt;code class=&quot;highlighter-rouge&quot;&gt;Array.find&lt;/code&gt; 替代  &lt;code class=&quot;highlighter-rouge&quot;&gt;Array.filter&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;Array.filter是一个十分有用的方法。它通过回调函数过滤原数组，并将过滤后的项作为新数组返回。正如它的名字所示，我们将这个方法用于过滤，（一般而言）会获得一个长度更短的新数组。&lt;/p&gt;
+
+&lt;p&gt;然而，如果知道经回调函数过滤后，只会剩余唯一的一项，那么我不建议使用 Array.filter。比如：使用等于某个唯一 ID 为过滤条件去过滤一个数组。在这个例子中，Array.filter返回一个仅有一项的新数组。然而，我们仅仅是为了获取 ID 为特定 ID 的那一项，这个新数组显得毫无用处。&lt;/p&gt;
+
+&lt;p&gt;让我们讨论一下性能。为了获取所有符合回调函数过滤条件的项，Array.filter必须遍历整个数组。如果原数组中有成千上万项，回调函数需要执行的次数是相当多的。&lt;/p&gt;
+
+&lt;p&gt;为避免这些情况，我建议使用 Array.find。它与 Array.filter一样需要一个回调函数，（但只是返回）符合条件的第一项。当找到符合回调函数过滤条件的第一个元素时，它会立即停止往下的搜寻。不再遍历整个数组。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;'use strict';
+
+const characters = [
+ { id: 1, name: 'ironman' },
+ { id: 2, name: 'black_widow' },
+ { id: 3, name: 'captain_america' },
+ { id: 4, name: 'captain_america' },
+];
+
+function getCharacter(name) {
+ return character =&amp;gt; character.name === name;
+}
+
+console.log(characters.filter(getCharacter('captain_america')));
+// [
+//   { id: 3, name: 'captain_america' },
+//   { id: 4, name: 'captain_america' },
+// ]
+
+console.log(characters.find(getCharacter('captain_america')));
+// { id: 3, name: 'captain_america' }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;使用-arraysome替代-arrayfind&quot;&gt;使用 Array.some替代 Array.find&lt;/h3&gt;
+
+&lt;p&gt;我承认我经常犯这个错误。之后，一位朋友建议我去查看 MDN 文档以寻找更好的方法。事实上（这错误）与上面 &lt;code class=&quot;highlighter-rouge&quot;&gt;Array.indexOf&lt;/code&gt;/&lt;code class=&quot;highlighter-rouge&quot;&gt;Array.includes&lt;/code&gt;的例子十分相像。
+在上面的例子中，我们知道&lt;code class=&quot;highlighter-rouge&quot;&gt;Array.find&lt;/code&gt;需要一个回调函数作为参数，并返回（符合条件的）第一个元素。然而，当我们需要知道数组中是否存在一个元素时，Array.find是最好的选择吗？不一定是，因为它返回一个元素，而不是一个布尔值。
+在下面的例子中，我建议使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;Array.some&lt;/code&gt;，它返回你需要的布尔值。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;'use strict';
+
+const characters = [
+ { id: 1, name: 'ironman', env: 'marvel' },
+ { id: 2, name: 'black_widow', env: 'marvel' },
+ { id: 3, name: 'wonder_woman', env: 'dc_comics' },
+];
+
+function hasCharacterFrom(env) {
+ return character =&amp;gt; character.env === env;
+}
+
+console.log(characters.find(hasCharacterFrom('marvel')));
+// { id: 1, name: 'ironman', env: 'marvel' }
+
+console.log(characters.some(hasCharacterFrom('marvel')));
+// true
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;补充一下&lt;code class=&quot;highlighter-rouge&quot;&gt;Array.some&lt;/code&gt;与&lt;code class=&quot;highlighter-rouge&quot;&gt;Array.includes&lt;/code&gt;使用上的区别。两者都返回一个布尔值，表示某项是否存在于数组之中，一旦找到对应的项，立即停止遍历数组。不同的是&lt;code class=&quot;highlighter-rouge&quot;&gt;Array.some&lt;/code&gt;的参数是回调函数，而 &lt;code class=&quot;highlighter-rouge&quot;&gt;Array.includes&lt;/code&gt;的参数是一个值（均不考虑第二个可选参数）。
+假设希望知道值为 value的项是否存在于数组中，既可以编写代码：&lt;code class=&quot;highlighter-rouge&quot;&gt;[].includes(value)&lt;/code&gt;， 也可以给&lt;code class=&quot;highlighter-rouge&quot;&gt;Array.some&lt;/code&gt;传入 &lt;code class=&quot;highlighter-rouge&quot;&gt;item =&amp;amp;gt; item === value&lt;/code&gt;作为回调函数。&lt;code class=&quot;highlighter-rouge&quot;&gt;Array.includes&lt;/code&gt;使用更简单，&lt;code class=&quot;highlighter-rouge&quot;&gt;Array.some&lt;/code&gt;可操控性更强。&lt;/p&gt;
+
+&lt;p&gt;使用&lt;code class=&quot;highlighter-rouge&quot;&gt;Array.reduce&lt;/code&gt;替代&lt;code class=&quot;highlighter-rouge&quot;&gt;Array.filter&lt;/code&gt;与&lt;code class=&quot;highlighter-rouge&quot;&gt;Array.map&lt;/code&gt;的组合&lt;/p&gt;
+
+&lt;p&gt;事实上说，&lt;code class=&quot;highlighter-rouge&quot;&gt;Array.reduce&lt;/code&gt;不太容易理解。然而，如果我们先使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;Array.filter&lt;/code&gt;过滤原数组，之后（对结果）再调用 &lt;code class=&quot;highlighter-rouge&quot;&gt;Array.map&lt;/code&gt;（以获取一个新数组）。这看起似乎有点问题，是我们忽略了什么吗？&lt;/p&gt;
+
+&lt;p&gt;这样做的问题是：我们遍历了两次数组。第一次是过滤原数组以获取一个长度稍短的新数组，第二次遍历（译者注：指 &lt;code class=&quot;highlighter-rouge&quot;&gt;Array.map&lt;/code&gt;）是对 &lt;code class=&quot;highlighter-rouge&quot;&gt;Array.filter&lt;/code&gt;的返回的新数组进行加工，再次创造了一个新数组！为得到最终的结果，我们结合使用了两个数组方法。每个方法都有它自己的回调函数，而且供 &lt;code class=&quot;highlighter-rouge&quot;&gt;Array.map&lt;/code&gt;使用的临时数组是由 &lt;code class=&quot;highlighter-rouge&quot;&gt;Array.filter&lt;/code&gt;提供的，（一般而言）该数组无法复用。&lt;/p&gt;
+
+&lt;p&gt;为避免如此低效场景的出现，我的建议是使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;Array.reduce&lt;/code&gt;。一样的结果，更好的代码！&lt;code class=&quot;highlighter-rouge&quot;&gt;Array.reduce&lt;/code&gt;允许你将过滤后切加工过的项放进累加器中。累加器可以是需要待递增的数字、待填充的对象、 待拼接的字符串或数组等。&lt;/p&gt;
+
+&lt;p&gt;在上面的例子中，我们使用了&lt;code class=&quot;highlighter-rouge&quot;&gt;Array.map&lt;/code&gt;，（但更）建议使用累加器为待拼接数组的 &lt;code class=&quot;highlighter-rouge&quot;&gt;Array.reduce&lt;/code&gt;。在下面的例子中，根据变量 env的值，我们会将它加进累加器中或保持累加器不变（即不作任何处理）。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;'use strict';
+
+const characters = [
+ { name: 'ironman', env: 'marvel' },
+ { name: 'black_widow', env: 'marvel' },
+ { name: 'wonder_woman', env: 'dc_comics' },
+];
+
+console.log(
+ characters
+   .filter(character =&amp;gt; character.env === 'marvel')
+   .map(character =&amp;gt; Object.assign({}, character, { alsoSeenIn: ['Avengers'] }))
+);
+// [
+//   { name: 'ironman', env: 'marvel', alsoSeenIn: ['Avengers'] },
+//   { name: 'black_widow', env: 'marvel', alsoSeenIn: ['Avengers'] }
+// ]
+
+console.log(
+ characters
+   .reduce((acc, character) =&amp;gt; {
+     return character.env === 'marvel'
+       ? acc.concat(Object.assign({}, character, { alsoSeenIn: ['Avengers'] }))
+       : acc;
+   }, [])
+)
+// [
+//   { name: 'ironman', env: 'marvel', alsoSeenIn: ['Avengers'] },
+//   { name: 'black_widow', env: 'marvel', alsoSeenIn: ['Avengers'] }
+// ]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>true</name></author><category term="数组" /><summary type="html">四个（关于数组使用的）错误经常出现！</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/2018/05/17/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-05-17T14:05:21+08:00</published><updated>2018-05-17T14:05:21+08:00</updated><id>http://localhost:4000/2018/05/17/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/2018/05/17/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 

@@ -1,0 +1,410 @@
+<!-- 博文的布局-Layout -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 引入head标签 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-sclable=0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="your web description" />
+<meta name="keywords" content="your web keywords, another keywords" />
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/media.css">
+<link rel="stylesheet" href="/assets/css/animate.min.css">
+<link rel="stylesheet" href="/assets/css/pygments/pygments_default.css">
+<link rel="stylesheet" href="/assets/css/github-markdown.css">
+<!-- SNS-icon -->
+<script src="//at.alicdn.com/t/font_856428_y9z6nq7zf5.js"></script>
+<!-- share.css -->
+<link rel="stylesheet" href="/assets/css/share.min.css">
+<!-- font -->
+<link rel="stylesheet" href="/assets/css/font.css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Pacifico|Ubuntu|Roboto+Mono|Source+Sans+Pro" rel="stylesheet"> -->
+
+<!-- Favicon -->
+<link href="/assets/profile.jpeg" rel="shortcut icon" />
+<link href="/assets/profile.jpeg" rel="apple-touch-icon-precomposed" />
+<!-- Android Lolipop Theme Color -->
+<!-- <meta name="theme-color" content="#1464FB"> -->
+<title>数组使用</title>
+<!-- 百度统计 -->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!-- 谷歌分析 -->
+
+
+<!-- Android Lolipop Theme Color -->
+<meta name="theme-color" content=" rgb(255,90,90) ">
+</head>
+<body>
+
+<!-- 顶部锚点 -->
+<a id="htmlup" name="htmlup"></a>
+<!-- 引入博文顶部选项 -->
+
+<header id="post-header" style="background-color:rgb(255,90,90);">
+  <div class="top-center">
+      <div class="logo">
+          <a href="/" title="my awesome webtitle" style="color: white;">your awesome webtitle</a>
+      </div>
+      <nav class="top-nav">
+          <ul>
+              
+                <li><a href="/" style="color: white;">首页</a></li>
+              
+                <li><a href="/tags.html" style="color: white;">标签</a></li>
+              
+                <li><a href="/timeline.html" style="color: white;">时间线</a></li>
+              
+                <li><a href="/about.html" style="color: white;">关于博主</a></li>
+              
+                <li><a href="/friendLink.html" style="color: white;">友情链接</a></li>
+              
+          </ul>
+      </nav>
+      <div id="top-boot">
+        <a href="javascript:;" id="boot1" style="display:block;" onclick="document.getElementById('boot-area').style.display='block';document.getElementById('boot1').style.display='none';document.getElementById('boot2').style.display='block';"><img src="/assets/boot_white.png" alt=""></a>
+        <a href="javascript:;" id="boot2" style="display: none;" onclick="document.getElementById('boot-area').style.display='none';document.getElementById('boot1').style.display='block';document.getElementById('boot2').style.display='none';"><img src="/assets/boot_white.png" alt=""></a>
+      </div>
+  </div>
+
+</header>
+
+
+<!-- 引入移动下拉选项 -->
+<div id="boot-area">
+    <ul>
+        
+          <a href="/"><li>首页</li></a>
+        
+          <a href="/tags.html"><li>标签</li></a>
+        
+          <a href="/timeline.html"><li>时间线</li></a>
+        
+          <a href="/about.html"><li>关于博主</li></a>
+        
+          <a href="/friendLink.html"><li>友情链接</li></a>
+        
+    </ul>
+</div>
+
+<!-- 引入博文顶部样式 -->
+<!-- 版本一 垃圾 -->
+<!-- <div class="wow fadeIn top" data-wow-duration="3.5s" >
+    <span class="wow fadeInUp" data-wow-delay="0.2s">数组使用</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span>
+</div> -->
+
+<!-- 版本二 可切换页面 -->
+
+<div class="post-top" style="background-color:rgb(255,90,90);">
+  <!-- 页面宽度大于800px -->
+  <div class="left-area">
+    
+      <a href="/2018/06/12/%E9%A1%B5%E9%9D%A2%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='rgb(255,90,90)';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:rgb(255,90,90);"><sapn class="main">页面开发流程</sapn></span></div>
+    
+  </div>
+  <div class="post-titlearea">
+    <span class="wow fadeInUp" data-wow-delay="0.2s">数组使用</span>
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span> -->
+  </div>
+  <div class="right-area">
+    
+      <a href="/2018/05/17/welcome-to-jekyll.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='rgb(255,90,90)';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:rgb(255,90,90);"><sapn class="main">Welcome to Jekyll!</sapn></span></div>
+    
+  </div>
+
+  <!-- 页面宽度小于800px -->
+  <div class="post-changearea">
+    
+      <a href="/2018/06/12/%E9%A1%B5%E9%9D%A2%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html" class="leftchange" style="border-right: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span>上一篇<br><br>页面开发流程</span></a>
+    
+    
+      <a href="/2018/05/17/welcome-to-jekyll.html" class="rightchange" style="border-left: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span>下一篇<br><br>Welcome to Jekyll!</span></a>
+    
+  </div>
+</div>
+
+
+<div class="markdown-body fadeInUp animated">
+
+  
+    
+      <div class="postpage-subtitle" style="border-left: 8px solid rgb(255,90,90); border-right: 8px solid rgb(255,90,90)">
+        数组使用错误
+      </div>
+    
+  
+
+  <!-- 文章内容 -->
+  <p>四个（关于数组使用的）错误经常出现！</p>
+
+<h3 id="使用arrayincludes替代-arrayindexof">使用<code class="highlighter-rouge">Array.includes</code>替代 <code class="highlighter-rouge">Array.indexOf</code></h3>
+
+<p>“如果需要在数组中查找某个元素，请使用 Array.indexOf。”</p>
+
+<p>我记得在我学习 <code class="highlighter-rouge">JavaScript</code> 的课程中有类似的这么一句话。毫无疑问，这完全正确！</p>
+
+<p>在 MDN 文档中，对 <code class="highlighter-rouge">Array.indexOf</code>的描述是：返回在数组中可以找到一个给定元素的第一个索引，如果不存在，则返回-1。因此，如果在之后的代码中需要用到（给给定元素的）索引，那么 Array.indexOf是不二之选。</p>
+
+<p>然而，如果我们仅需要知道数组中是否包含给定元素呢？这意味着只是是与否的区别，这是一个布尔问题（boolean question）。针对这种情况，我建议使用直接返回布尔值的 <code class="highlighter-rouge">Array.includes</code>。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'use strict';
+
+const characters = [
+ 'ironman',
+ 'black_widow',
+ 'hulk',
+ 'captain_america',
+ 'hulk',
+ 'thor',
+];
+
+console.log(characters.indexOf('hulk'));
+// 2
+console.log(characters.indexOf('batman'));
+// -1
+
+console.log(characters.includes('hulk'));
+// true
+console.log(characters.includes('batman'));
+// false
+</code></pre></div></div>
+<h3 id="使用--arrayfind-替代--arrayfilter">使用  <code class="highlighter-rouge">Array.find</code> 替代  <code class="highlighter-rouge">Array.filter</code></h3>
+
+<p>Array.filter是一个十分有用的方法。它通过回调函数过滤原数组，并将过滤后的项作为新数组返回。正如它的名字所示，我们将这个方法用于过滤，（一般而言）会获得一个长度更短的新数组。</p>
+
+<p>然而，如果知道经回调函数过滤后，只会剩余唯一的一项，那么我不建议使用 Array.filter。比如：使用等于某个唯一 ID 为过滤条件去过滤一个数组。在这个例子中，Array.filter返回一个仅有一项的新数组。然而，我们仅仅是为了获取 ID 为特定 ID 的那一项，这个新数组显得毫无用处。</p>
+
+<p>让我们讨论一下性能。为了获取所有符合回调函数过滤条件的项，Array.filter必须遍历整个数组。如果原数组中有成千上万项，回调函数需要执行的次数是相当多的。</p>
+
+<p>为避免这些情况，我建议使用 Array.find。它与 Array.filter一样需要一个回调函数，（但只是返回）符合条件的第一项。当找到符合回调函数过滤条件的第一个元素时，它会立即停止往下的搜寻。不再遍历整个数组。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'use strict';
+
+const characters = [
+ { id: 1, name: 'ironman' },
+ { id: 2, name: 'black_widow' },
+ { id: 3, name: 'captain_america' },
+ { id: 4, name: 'captain_america' },
+];
+
+function getCharacter(name) {
+ return character =&gt; character.name === name;
+}
+
+console.log(characters.filter(getCharacter('captain_america')));
+// [
+//   { id: 3, name: 'captain_america' },
+//   { id: 4, name: 'captain_america' },
+// ]
+
+console.log(characters.find(getCharacter('captain_america')));
+// { id: 3, name: 'captain_america' }
+</code></pre></div></div>
+
+<h3 id="使用-arraysome替代-arrayfind">使用 Array.some替代 Array.find</h3>
+
+<p>我承认我经常犯这个错误。之后，一位朋友建议我去查看 MDN 文档以寻找更好的方法。事实上（这错误）与上面 <code class="highlighter-rouge">Array.indexOf</code>/<code class="highlighter-rouge">Array.includes</code>的例子十分相像。
+在上面的例子中，我们知道<code class="highlighter-rouge">Array.find</code>需要一个回调函数作为参数，并返回（符合条件的）第一个元素。然而，当我们需要知道数组中是否存在一个元素时，Array.find是最好的选择吗？不一定是，因为它返回一个元素，而不是一个布尔值。
+在下面的例子中，我建议使用 <code class="highlighter-rouge">Array.some</code>，它返回你需要的布尔值。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'use strict';
+
+const characters = [
+ { id: 1, name: 'ironman', env: 'marvel' },
+ { id: 2, name: 'black_widow', env: 'marvel' },
+ { id: 3, name: 'wonder_woman', env: 'dc_comics' },
+];
+
+function hasCharacterFrom(env) {
+ return character =&gt; character.env === env;
+}
+
+console.log(characters.find(hasCharacterFrom('marvel')));
+// { id: 1, name: 'ironman', env: 'marvel' }
+
+console.log(characters.some(hasCharacterFrom('marvel')));
+// true
+</code></pre></div></div>
+
+<p>补充一下<code class="highlighter-rouge">Array.some</code>与<code class="highlighter-rouge">Array.includes</code>使用上的区别。两者都返回一个布尔值，表示某项是否存在于数组之中，一旦找到对应的项，立即停止遍历数组。不同的是<code class="highlighter-rouge">Array.some</code>的参数是回调函数，而 <code class="highlighter-rouge">Array.includes</code>的参数是一个值（均不考虑第二个可选参数）。
+假设希望知道值为 value的项是否存在于数组中，既可以编写代码：<code class="highlighter-rouge">[].includes(value)</code>， 也可以给<code class="highlighter-rouge">Array.some</code>传入 <code class="highlighter-rouge">item =&amp;gt; item === value</code>作为回调函数。<code class="highlighter-rouge">Array.includes</code>使用更简单，<code class="highlighter-rouge">Array.some</code>可操控性更强。</p>
+
+<p>使用<code class="highlighter-rouge">Array.reduce</code>替代<code class="highlighter-rouge">Array.filter</code>与<code class="highlighter-rouge">Array.map</code>的组合</p>
+
+<p>事实上说，<code class="highlighter-rouge">Array.reduce</code>不太容易理解。然而，如果我们先使用 <code class="highlighter-rouge">Array.filter</code>过滤原数组，之后（对结果）再调用 <code class="highlighter-rouge">Array.map</code>（以获取一个新数组）。这看起似乎有点问题，是我们忽略了什么吗？</p>
+
+<p>这样做的问题是：我们遍历了两次数组。第一次是过滤原数组以获取一个长度稍短的新数组，第二次遍历（译者注：指 <code class="highlighter-rouge">Array.map</code>）是对 <code class="highlighter-rouge">Array.filter</code>的返回的新数组进行加工，再次创造了一个新数组！为得到最终的结果，我们结合使用了两个数组方法。每个方法都有它自己的回调函数，而且供 <code class="highlighter-rouge">Array.map</code>使用的临时数组是由 <code class="highlighter-rouge">Array.filter</code>提供的，（一般而言）该数组无法复用。</p>
+
+<p>为避免如此低效场景的出现，我的建议是使用 <code class="highlighter-rouge">Array.reduce</code>。一样的结果，更好的代码！<code class="highlighter-rouge">Array.reduce</code>允许你将过滤后切加工过的项放进累加器中。累加器可以是需要待递增的数字、待填充的对象、 待拼接的字符串或数组等。</p>
+
+<p>在上面的例子中，我们使用了<code class="highlighter-rouge">Array.map</code>，（但更）建议使用累加器为待拼接数组的 <code class="highlighter-rouge">Array.reduce</code>。在下面的例子中，根据变量 env的值，我们会将它加进累加器中或保持累加器不变（即不作任何处理）。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'use strict';
+
+const characters = [
+ { name: 'ironman', env: 'marvel' },
+ { name: 'black_widow', env: 'marvel' },
+ { name: 'wonder_woman', env: 'dc_comics' },
+];
+
+console.log(
+ characters
+   .filter(character =&gt; character.env === 'marvel')
+   .map(character =&gt; Object.assign({}, character, { alsoSeenIn: ['Avengers'] }))
+);
+// [
+//   { name: 'ironman', env: 'marvel', alsoSeenIn: ['Avengers'] },
+//   { name: 'black_widow', env: 'marvel', alsoSeenIn: ['Avengers'] }
+// ]
+
+console.log(
+ characters
+   .reduce((acc, character) =&gt; {
+     return character.env === 'marvel'
+       ? acc.concat(Object.assign({}, character, { alsoSeenIn: ['Avengers'] }))
+       : acc;
+   }, [])
+)
+// [
+//   { name: 'ironman', env: 'marvel', alsoSeenIn: ['Avengers'] },
+//   { name: 'black_widow', env: 'marvel', alsoSeenIn: ['Avengers'] }
+// ]
+</code></pre></div></div>
+
+  <!-- 引入share模块 -->
+  
+  <div class="social-share-wrapper">
+    <div class="social-share"></div>
+  </div>
+
+
+<!-- share.js -->
+<script src="/assets/js/social-share.min.js"></script>
+<script>
+  socialShare('.social-share', {
+    sites: [
+      
+        'qq'
+        ,
+        
+      
+        'wechat'
+        ,
+        
+      
+        'weibo'
+        ,
+        
+      
+        'twitter'
+        ,
+        
+      
+        'facebook'
+        
+      
+    ],
+    wechatQrcodeTitle: "分享到微信朋友圈",
+    wechatQrcodeHelper: '期待在朋友圈见到这篇文章'
+  });
+</script>
+
+</div>
+
+<!-- 底部锚点 -->
+<a id="htmldown" name="htmldown"></a>
+<!-- 引入评论模块 -->
+
+
+
+    <section class="post-footer-item comment">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNDI2OS8xMDgwNg=="></div>
+    </section>
+
+    <!-- 来必力City版安装代码 -->
+    <script type="text/javascript">
+       (function(d, s) {
+           var j, e = d.getElementsByTagName(s)[0];
+
+           if (typeof LivereTower === 'function') { return; }
+
+           j = d.createElement(s);
+           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+           j.async = true;
+
+           e.parentNode.insertBefore(j, e);
+       })(document, 'script');
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    <!-- City版安装代码已完成 -->
+
+
+
+
+
+<!-- 引入goto模块 -->
+<div class="bounceInRight animated go">
+  <a title="顶部切换页面" class="gototop" href="#htmlup" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Top
+    </div>
+  </a>
+  <a title="底部有livere评论哦" class="gotobottom" href="#htmldown" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Foot
+    </div>
+  </a>
+</div>
+
+<!-- 引入页面底部模块 -->
+<footer id="bottom">
+  <br>
+  <span>All about web ©
+  
+  
+  2018
+  <br>
+  Powered by <a href="https://www.jekyll.com.cn/">Jekyll</a></span>
+</footer>
+
+
+<!-- 引用wow.js的动画效果 -->
+<script src="/assets/js/wow.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        // offset: 600,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+</script>
+<!-- 页面刷新回到顶部 -->
+<script>
+    window.onbeforeunload = function(){
+        //刷新后页面自动回到顶部
+        document.documentElement.scrollTop = 0;  //ie下
+        document.body.scrollTop = 0;  //非ie
+    }
+</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
