@@ -1,4 +1,12 @@
-#Vue.js
+---
+layout: post
+title:  "Vue.js"
+date: 2018-10-09 22:05:21 +0800
+tags: vue
+color: rgb(255,90,90)
+cover: '../assets/test.png'
+---
+
 ##Vue.js渐进式框架
 ###1.声明式渲染 Declarative Rendering
 基本要求，使用声明式渲染页面字段
