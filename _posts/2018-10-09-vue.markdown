@@ -1,0 +1,17 @@
+#Vue.js
+##Vue.js渐进式框架
+###1.声明式渲染 Declarative Rendering
+基本要求，使用声明式渲染页面字段
+###2.组件系统 Component System
+公共部分头部尾部抽出来
+###3.客户端路由 Client-Side Routing
+单页面程序需要路由`vue-route`
+###4.大规模状态管理 Large Scale State Management
+`vuex`管理状态
+###5.构建工具 Build System
+提升效率，实现完整项目
+
+##高效
+* 16kb
+* 超快虚拟DOM 比直接操作HTML DOM高效
+* 核心api没变 但是废除了一些功能 js可以做的都优化掉
